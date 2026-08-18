@@ -66,21 +66,26 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* GIVING DROPDOWN */}
-        <div className={styles.dropdown}>
-          <button
-            type="button"
-            className={styles.dropdownButton}
-          >
-            GIVING
-          </button>
+       {/* GIVING DROPDOWN */}
+<div className={styles.dropdown}>
+  <button
+    type="button"
+    className={styles.dropdownButton}
+  >
+    GIVING
+  </button>
 
-          <div className={styles.dropdownMenu}>
-            <a href="#partner-with-us">
-              Partner With Us
-            </a>
-          </div>
-        </div>
+  <div className={styles.dropdownMenu}>
+    <a href="#partner-with-us">
+      Partner With Us
+    </a>
+  </div>
+</div>
+
+{/* BLOG */}
+<a href="#blog" className={styles.navLink}>
+  BLOG
+</a>
 
       </nav>
 
