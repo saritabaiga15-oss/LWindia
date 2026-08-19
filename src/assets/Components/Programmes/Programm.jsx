@@ -241,7 +241,11 @@ const Programmes = () => {
             {/* Center: Tune In Live Description */}
             <div className="availableCenter">
               <p className="availableDesc">
-                Tune in live and stream all Loveworld India programmes seamlessly on your Smart TV, mobile, and tablet.
+                Tune in live and stream all Loveworld India
+                <br />
+                programmes seamlessly across your Smart TV,
+                <br />
+                mobile, and tablet devices.
               </p>
             </div>
 
