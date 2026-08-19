@@ -23,7 +23,7 @@ const Features = () => {
 
       {/* HEADER */}
       <div className={styles.header}>
-        <h2>FEATURES &amp; MESSAGE</h2>
+        <h2>FEATURED MESSAGE</h2>
         <span></span>
       </div>
 

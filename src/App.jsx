@@ -5,7 +5,9 @@ import Hero from "./assets/Components/Hero/Hero";
 import Marquee from "./assets/Components/Marquee/Marquee";
 import Features from "./assets/Components/Features/Features";
 import HealingStream from "./assets/Components/HealingStream/HealingStream";
+import Programm from "./assets/Components/Programm/Programm";
 import Messages from "./assets/Components/Messages/Messages";
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <Marquee />
       <Features />
       <HealingStream/>
+      <Programm/>
       <Messages/>
     </>
   );

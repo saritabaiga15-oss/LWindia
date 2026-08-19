@@ -1,273 +1,587 @@
+/* =========================================================
+   MAIN MESSAGES SECTION
+========================================================= */
+
 .messages {
   width: 100%;
   min-height: 100vh;
-  padding: 70px 7%;
+
+  padding: 80px 7%;
+
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 
-  background:
-    radial-gradient(
-      circle at 70% 30%,
-      rgba(92, 45, 130, 0.5),
-      transparent 55%
-    ),
-    #111a48;
-
-  color: #ffffff;
-  font-family: "Montserrat", sans-serif;
-}
-
-
-/* =========================
-   YEAR SECTION
-========================= */
-
-.yearSection {
-  max-width: 1200px;
-  margin: 0 auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 70px;
-}
-
-
-/* =========================
-   YEAR TEXT
-========================= */
-
-.yearText {
-  flex: 1;
-}
-
-.smallLabel {
-  display: inline-block;
-
-  margin-bottom: 12px;
-
-  padding: 4px 10px;
-
-  border: 1px solid rgba(190, 70, 255, 0.7);
-  border-radius: 20px;
-
-  color: #d9a7ff;
-
-  font-size: 8px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-}
-
-.yearText h2 {
-  margin: 0 0 18px;
-
-  font-size: clamp(38px, 4vw, 58px);
-  line-height: 0.95;
-  font-weight: 900;
-}
-
-.yearText h2 span {
-  color: #ffffff;
-}
-
-.yearText p {
-  max-width: 430px;
-
-  margin: 0 0 25px;
-
-  color: rgba(255, 255, 255, 0.7);
-
-  font-size: 12px;
-  line-height: 1.7;
-}
-
-.yearText button {
-  border: none;
-  border-radius: 30px;
-
-  padding: 11px 20px;
-
+  /* SAME BACKGROUND AS YOUR SCREENSHOT */
   background: linear-gradient(
     90deg,
-    #bd00ff,
-    #8500ff
+    #122248 0%,
+    #1f2d5d 45%,
+    #3e2e5e 100%
   );
 
   color: #ffffff;
 
-  font-size: 9px;
+  font-family: "Montserrat", system-ui, -apple-system, sans-serif;
+}
+
+
+/* =========================================================
+   YEAR SECTION
+========================================================= */
+
+.yearSection {
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+
+/* =========================================================
+   YEAR TEXT
+========================================================= */
+
+.yearText {
+  flex: 1.15;
+}
+
+
+/* =========================================================
+   SMALL LABEL
+========================================================= */
+
+.yearText .smallLabel {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  padding: 6px 16px;
+
+  border: 1px solid rgba(168, 85, 247, 0.45);
+
+  border-radius: 9999px;
+
+  background: rgba(88, 28, 135, 0.35);
+
+  color: #d8b4fe;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.25);
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   YEAR HEADING
+========================================================= */
+
+.yearText h2 {
+  margin: 0 0 20px;
+
+  font-size: clamp(38px, 4.2vw, 56px);
+
+  line-height: 1.1;
+
   font-weight: 800;
+
+  color: #ffffff;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* =========================================================
+   MANIFESTATION HIGHLIGHT
+========================================================= */
+
+.yearText h2 span {
+  color: #f2b735;
+
+  font-weight: 900;
+
+  display: inline-block;
+
+  text-shadow: 0 0 26px rgba(242, 183, 53, 0.3);
+}
+
+
+/* =========================================================
+   YEAR PARAGRAPH
+========================================================= */
+
+.yearText p {
+  max-width: 480px;
+
+  margin: 0 0 18px;
+
+  color: rgba(226, 220, 245, 0.78);
+
+  font-size: 13.5px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   EXPLORE BUTTON
+========================================================= */
+
+.yearText button {
+  border: none;
+
+  border-radius: 9999px;
+
+  padding: 13px 30px;
+
+  background: linear-gradient(
+    135deg,
+    #f5c242 0%,
+    #e6a724 100%
+  );
+
+  color: #1a1002;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
 
   cursor: pointer;
 
-  transition: 0.3s ease;
+  box-shadow: 0 4px 20px rgba(242, 183, 53, 0.35);
+
+  transition: all 0.25s ease-in-out;
+
+  margin-top: 10px;
 }
 
 .yearText button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 
-  box-shadow:
-    0 10px 25px rgba(145, 0, 255, 0.4);
+  box-shadow: 0 8px 28px rgba(242, 183, 53, 0.55);
+
+  filter: brightness(1.05);
 }
 
 
-/* =========================
-   YEAR IMAGE
-========================= */
+/* =========================================================
+   YEAR IMAGE / POSTER
+========================================================= */
 
 .yearImageWrapper {
   width: 360px;
 
+  flex-shrink: 0;
+
   display: flex;
+
   justify-content: center;
 }
 
 .yearImageWrapper img {
   width: 100%;
+
   max-width: 360px;
 
   display: block;
 
-  border-radius: 8px;
+  border-radius: 18px;
+
+  padding: 5px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.4),
+    rgba(88, 28, 135, 0.2)
+  );
+
+  border: 1.5px solid rgba(168, 85, 247, 0.5);
 
   box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.35);
+    0 0 35px rgba(147, 51, 234, 0.45),
+    0 20px 40px rgba(0, 0, 0, 0.7);
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.yearImageWrapper img:hover {
+  transform: scale(1.02);
+
+  box-shadow:
+    0 0 50px rgba(168, 85, 247, 0.65),
+    0 25px 50px rgba(0, 0, 0, 0.8);
 }
 
 
-/* =========================
-   MONTH SECTION
-========================= */
+/* =========================================================
+   CENTER DIVIDER
+========================================================= */
+
+.dividerSection {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  margin: 35px auto;
+
+  max-width: 1000px;
+}
+
+.dividerArrow {
+  color: #8f00ff;
+
+  font-size: 1.4rem;
+
+  font-weight: 700;
+}
+
+.dividerLine {
+  width: 200px;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    #eab308 0%,
+    rgba(234, 179, 8, 0.15) 100%
+  );
+}
+
+
+/* =========================================================
+   MONTH SECTION CARD
+========================================================= */
 
 .monthSection {
-  max-width: 1000px;
+  max-width: 1050px;
 
-  margin: 80px auto 0;
+  margin: 0 auto;
 
-  padding: 35px;
+  padding: 38px 44px;
 
   display: flex;
+
   align-items: center;
 
   gap: 45px;
 
-  border-radius: 12px;
+  border-radius: 22px;
 
-  background: rgba(255, 255, 255, 0.035);
+  background: rgba(26, 17, 48, 0.72);
 
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(147, 51, 234, 0.22);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
 
   box-sizing: border-box;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.monthSection:hover {
+  border-color: rgba(168, 85, 247, 0.38);
+
+  box-shadow:
+    0 24px 55px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(124, 58, 237, 0.15);
 }
 
 
-/* =========================
+/* =========================================================
    MONTH IMAGE
-========================= */
+========================================================= */
 
 .monthImageWrapper {
-  width: 300px;
+  width: 380px;
+
+  aspect-ratio: 16 / 9.5;
 
   flex-shrink: 0;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  background: #090514;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
 .monthImageWrapper img {
   width: 100%;
 
-  display: block;
+  height: 100%;
 
-  border-radius: 5px;
+  object-fit: cover;
+
+  display: block;
 }
 
 
-/* =========================
+/* =========================================================
    MONTH TEXT
-========================= */
+========================================================= */
 
 .monthText {
   flex: 1;
 }
+
+
+/* =========================================================
+   MONTH LABEL
+========================================================= */
 
 .monthText .smallLabel {
   border: none;
 
   padding: 0;
 
-  color: #aaa3c4;
+  color: #eab308;
+
+  font-size: 11.5px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  display: inline-block;
+
+  margin-bottom: 8px;
 }
 
+
+/* =========================================================
+   MONTH HEADING
+========================================================= */
+
 .monthText h3 {
-  margin: 8px 0 18px;
+  margin: 0 0 16px;
 
-  font-size: 20px;
+  font-size: 22px;
 
-  line-height: 1.1;
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  color: #ffffff;
 }
 
 .monthText h3 strong {
-  display: inline-block;
+  display: block;
 
-  margin-top: 3px;
+  margin-top: 4px;
 
-  color: #ffffff;
+  color: #f2b735;
 
-  font-size: 34px;
+  font-size: clamp(30px, 3.6vw, 42px);
 
   font-weight: 900;
+
+  letter-spacing: 0.01em;
+
+  text-shadow: 0 0 20px rgba(242, 183, 53, 0.25);
 }
+
+
+/* =========================================================
+   MONTH PARAGRAPH
+========================================================= */
 
 .monthText p {
-  margin: 0 0 12px;
+  margin: 0 0 14px;
 
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(224, 218, 243, 0.78);
 
-  font-size: 11px;
+  font-size: 13px;
 
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =========================================================
+   SCRIPTURE QUOTE BOX
+========================================================= */
 
-@media (max-width: 768px) {
+.quoteCallout {
+  border-left: 3px solid #f2b735;
+
+  padding: 4px 0 4px 16px;
+
+  margin: 16px 0 14px;
+}
+
+.quoteCallout p {
+  font-size: 12.5px;
+
+  color: rgba(245, 240, 255, 0.92);
+
+  line-height: 1.55;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
 
   .messages {
     padding: 50px 20px;
   }
 
+
   .yearSection {
     flex-direction: column;
 
-    align-items: flex-start;
+    align-items: center;
 
-    gap: 35px;
+    text-align: center;
+
+    gap: 40px;
   }
+
+
+  .yearText p {
+    max-width: 100%;
+  }
+
 
   .yearImageWrapper {
     width: 100%;
+
+    max-width: 320px;
   }
 
-  .yearImageWrapper img {
-    max-width: 330px;
-  }
 
   .monthSection {
     flex-direction: column;
 
-    align-items: flex-start;
+    align-items: center;
 
-    padding: 25px;
+    padding: 28px 24px;
 
-    gap: 25px;
+    gap: 28px;
   }
+
+
+  .monthImageWrapper {
+    width: 100%;
+
+    max-width: 100%;
+  }
+
+
+  .monthText {
+    width: 100%;
+  }
+
+
+  .monthText h3 strong {
+    font-size: 32px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .messages {
+    padding: 40px 18px;
+  }
+
+
+  .yearText h2 {
+    font-size: 32px;
+  }
+
+
+  .yearText p {
+    font-size: 13px;
+  }
+
+
+  .yearImageWrapper {
+    max-width: 280px;
+  }
+
+
+  .monthSection {
+    padding: 22px 18px;
+
+    gap: 22px;
+  }
+
 
   .monthImageWrapper {
     width: 100%;
   }
 
+
+  .monthText h3 {
+    font-size: 20px;
+  }
+
+
   .monthText h3 strong {
-    font-size: 28px;
+    font-size: 30px;
+  }
+
+
+  .monthText p {
+    font-size: 13px;
+  }
+
+
+  .dividerSection {
+    margin: 25px auto;
+  }
+
+
+  .dividerLine {
+    width: 100px;
   }
 }
