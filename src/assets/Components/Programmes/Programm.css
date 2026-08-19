@@ -422,7 +422,11 @@
 }
 
 .availableLeft {
-  flex: 1;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .availablePill {
@@ -436,15 +440,16 @@
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .availableTitle {
-  margin: 0 0 6px 0;
+  margin: 0;
   font-size: 22px;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .goldHighlight {
@@ -454,12 +459,22 @@
   display: inline-block;
 }
 
+.availableCenter {
+  flex: 1;
+  text-align: center;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .availableDesc {
   margin: 0;
-  color: rgba(226, 220, 245, 0.75);
+  color: rgba(226, 220, 245, 0.82);
   font-size: 13.5px;
-  line-height: 1.5;
-  max-width: 580px;
+  line-height: 1.6;
+  max-width: 520px;
+  text-align: center;
 }
 
 .availableRight {
@@ -528,7 +543,7 @@
 /* =========================================================
    RESPONSIVE DESIGN
 ========================================================= */
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .programmesHeader {
     flex-direction: column;
     align-items: flex-start;
@@ -537,6 +552,29 @@
 
   .programmeCard {
     flex: 0 0 380px;
+  }
+
+  .availableOnCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 24px 20px;
+  }
+
+  .availableLeft {
+    align-items: center;
+    text-align: center;
+  }
+
+  .availableCenter {
+    padding: 0;
+  }
+
+  .availableRight {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -562,19 +600,31 @@
   }
 
   .availableOnCard {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    gap: 20px;
+    padding: 20px 16px;
+    gap: 18px;
   }
 
-  .availableRight {
-    width: 100%;
+  .availableTitle {
+    font-size: 20px;
+    white-space: normal;
+  }
+
+  .availableDesc {
+    font-size: 13px;
   }
 
   .availableBadgeGroup {
     width: 100%;
     box-sizing: border-box;
     justify-content: space-between;
+    padding: 8px 14px;
+  }
+
+  .logoCard {
+    padding: 4px 10px;
+  }
+
+  .jiotvLogoImage {
+    height: 32px;
   }
 }

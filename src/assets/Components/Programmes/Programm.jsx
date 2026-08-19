@@ -230,16 +230,22 @@ const Programmes = () => {
         {/* ================= AVAILABLE ON SECTION ================= */}
         <div className="availableOnSection">
           <div className="availableOnCard">
+            {/* Left: 24/7 Broadcast Badge & Title */}
             <div className="availableLeft">
               <span className="availablePill">24/7 BROADCAST</span>
               <h3 className="availableTitle">
                 Available On <span className="goldHighlight">JioTV</span>
               </h3>
+            </div>
+
+            {/* Center: Tune In Live Description */}
+            <div className="availableCenter">
               <p className="availableDesc">
                 Tune in live and stream all Loveworld India programmes seamlessly on your Smart TV, mobile, and tablet.
               </p>
             </div>
 
+            {/* Right: JioTV Logo Badge Group */}
             <div className="availableRight">
               <div className="availableBadgeGroup">
                 <div className="logoCard">
