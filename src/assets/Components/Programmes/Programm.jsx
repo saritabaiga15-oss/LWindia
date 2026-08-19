@@ -2,38 +2,39 @@ import React, { useRef, useState, useEffect } from "react";
 import "./Programm.css";
 
 // Program image imports
-import trumpetImg from "./ProgrammImage/Image1.png.jpeg";
-import craftingFaithImg from "./ProgrammImage/Image2.png.jpeg";
-import reflectionTimeImg from "./ProgrammImage/Image3.png.jpeg";
-import longTimeAgoImg from "./ProgrammImage/Image4.png.jpeg";
-import picImg from "./ProgrammImage/Pic.jpeg";
-import pic1Img from "./ProgrammImage/pic1.jpeg";
+import trumpetImg from "./ProgrammImage/trumpet.png";
+import craftingFaithImg from "./ProgrammImage/crafting_faith.png";
+import reflectionTimeImg from "./ProgrammImage/reflection_time.png";
+import longTimeAgoImg from "./ProgrammImage/long_time_ago.png";
+import moneyMattersImg from "./ProgrammImage/money_matters.png";
+import igniteImg from "./ProgrammImage/ignite.png";
 
 const PROGRAMMES_DATA = [
   {
     id: "trumpet",
     title: "THE TRUMPET",
-    subtitle: "The Trumpet (Info)",
+    subtitle: "Sounding Truth & Faith",
     tag: "Flagship Broadcast",
     host: "Deacon Vijay Bansode",
     description: "An uplifting broadcast sounding the trumpet of truth, miracles, faith, and inspiration across nations.",
     schedule: "Every Sunday at 7:00 PM",
     image: trumpetImg,
-    color: "#f5c242",
+    color: "#f59e0b",
   },
   {
     id: "crafting-faith",
     title: "CRAFTING FAITH",
-    subtitle: "Crafting Faith (Info)",
+    subtitle: "Art, Creativity & Faith",
     tag: "Creative & Spiritual",
-    host: "Loveworld India",
-    description: "Explore the depths of God's Word with creative insights, heartfelt conversations, and practical faith building.",
+    host: "Jerilee Pinheiro",
+    description: "Explore the depths of God's Word through creative expression, art, heartfelt conversations, and practical faith building.",
+    schedule: "Thursdays at 5:30 PM",
     image: craftingFaithImg,
     color: "#d8b4fe",
   },
   {
     id: "reflection-time",
-    title: "Reflection Time",
+    title: "REFLECTION TIME",
     subtitle: "with Abha",
     tag: "Youth & Inspiration",
     host: "Abha",
@@ -52,6 +53,28 @@ const PROGRAMMES_DATA = [
     schedule: "Saturdays at 11:00 AM",
     image: longTimeAgoImg,
     color: "#60a5fa",
+  },
+  {
+    id: "money-matters",
+    title: "MONEY MATTERS",
+    subtitle: "Kingdom Finance & Growth",
+    tag: "Finance & Prosperity",
+    host: "Loveworld India",
+    description: "Master biblical principles of financial prosperity, wealth creation, stewardship, and economic dominion in your daily life and career.",
+    schedule: "Tuesdays at 6:30 PM",
+    image: moneyMattersImg,
+    color: "#34d399",
+  },
+  {
+    id: "ignite",
+    title: "IGNITE",
+    subtitle: "Youth Group & Life Discussions",
+    tag: "Youth & Community",
+    host: "Loveworld Youth",
+    description: "An engaging youth talk show discussing contemporary culture, spiritual freedom, overcoming challenges, and walking in divine purpose.",
+    schedule: "Fridays at 5:00 PM",
+    image: igniteImg,
+    color: "#fb923c",
   },
 ];
 
