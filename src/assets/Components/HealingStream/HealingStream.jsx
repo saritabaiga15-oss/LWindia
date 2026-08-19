@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./HealingStream.css";
 
 /* =========================================================
-   IMPORT ALL 5 HEALING IMAGES
+   IMPORT HEALING IMAGES
 ========================================================= */
 import photo1 from "../HealingImage/Photo1.jpeg";
+import photo2 from "../HealingImage/Photo2.jpeg";
+import photo3 from "../HealingImage/photo4.png";
+import photo4 from "../HealingImage/photo6.jpeg";
 
-const photos = [photo1, photo2, photo3, photo4, photo5];
+const photos = [photo1, photo2, photo3, photo4];
 
 const HealingStream = () => {
   /* =======================================================

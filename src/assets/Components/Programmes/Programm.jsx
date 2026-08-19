@@ -1,13 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
-import "./Programm.module.css";
+import "./Programm.css";
 
 // Program image imports
-import programmImage from "../ProgrammImage/Image1.png.jpeg";
-import programmImage from "../ProgrammImage/Image2.png.jpeg";
-import programmImage from "../ProgrammImage/Image3.png.jpeg";
-import programmImage from "../ProgrammImage/Image4.png.jpeg";
-import programmImage from "../ProgrammImage/Pic.jpeg";
-import programmImage from "../ProgrammImage/pic1.jpeg";
+import trumpetImg from "./ProgrammImage/Image1.png.jpeg";
+import craftingFaithImg from "./ProgrammImage/Image2.png.jpeg";
+import reflectionTimeImg from "./ProgrammImage/Image3.png.jpeg";
+import longTimeAgoImg from "./ProgrammImage/Image4.png.jpeg";
+import picImg from "./ProgrammImage/Pic.jpeg";
+import pic1Img from "./ProgrammImage/pic1.jpeg";
 
 const PROGRAMMES_DATA = [
   {
