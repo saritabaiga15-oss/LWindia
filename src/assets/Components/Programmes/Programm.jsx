@@ -8,6 +8,7 @@ import reflectionTimeImg from "./ProgrammImage/reflection_time.png";
 import longTimeAgoImg from "./ProgrammImage/long_time_ago.png";
 import moneyMattersImg from "./ProgrammImage/money_matters.png";
 import igniteImg from "./ProgrammImage/ignite.png";
+import jiotvLogo from "./jiotv.png";
 
 const PROGRAMMES_DATA = [
   {
@@ -224,6 +225,33 @@ const Programmes = () => {
           <a href="#all-programmes" className="bottomExploreLink">
             EXPLORE ALL PROGRAMMES <span className="goldArrow">→</span>
           </a>
+        </div>
+
+        {/* ================= AVAILABLE ON SECTION ================= */}
+        <div className="availableOnSection">
+          <div className="availableOnCard">
+            <div className="availableLeft">
+              <span className="availablePill">24/7 BROADCAST</span>
+              <h3 className="availableTitle">
+                Available On <span className="goldHighlight">JioTV</span>
+              </h3>
+              <p className="availableDesc">
+                Tune in live and stream all Loveworld India programmes seamlessly on your Smart TV, mobile, and tablet.
+              </p>
+            </div>
+
+            <div className="availableRight">
+              <div className="availableBadgeGroup">
+                <div className="logoCard">
+                  <img src={jiotvLogo} alt="JioTV Logo" className="jiotvLogoImage" />
+                </div>
+                <div className="channelDetails">
+                  <span className="channelNum">Channel 4080</span>
+                  <span className="liveStatus"><span className="liveDot"></span>LIVE NOW</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
