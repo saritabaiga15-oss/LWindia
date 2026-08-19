@@ -1,24 +1,25 @@
 /* =========================================================
-   HEALING STREAM
+   HEALING STREAM SECTION
+   Background: Deep Navy/Midnight Blue to Dark Rich Violet Purple Gradient
 ========================================================= */
 
 .healingStream {
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
-
-  font-family: "Montserrat", sans-serif;
-
+  font-family: "Montserrat", system-ui, -apple-system, sans-serif;
   overflow: hidden;
+  position: relative;
+  padding: 40px 0 80px;
 
-  background: linear-gradient(
-    90deg,
-    #122248 0%,
-    #1f2d5d 45%,
-    #3e2e5e 100%
-  );
+  /* Exact Deep Navy to Deep Violet/Purple Gradient */
+  background-color: #101c3d;
+  background:
+    radial-gradient(ellipse at 92% 92%, rgba(95, 45, 105, 0.85) 0%, transparent 60%),
+    radial-gradient(ellipse at 8% 12%, rgba(20, 38, 80, 0.9) 0%, transparent 65%),
+    linear-gradient(135deg, #101d3e 0%, #152854 35%, #2d2556 68%, #4a275a 88%, #572d63 100%);
+  color: #ffffff;
 }
-
 
 /* =========================================================
    HEADER
@@ -26,318 +27,462 @@
 
 .healingHeader {
   width: 100%;
-
-  padding: 35px 20px;
-
+  padding: 30px 20px 20px;
   box-sizing: border-box;
-
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .healingHeader h2 {
   margin: 0;
-
   color: #ffffff;
-
-  font-size: 24px;
-
+  font-size: 26px;
   font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
 }
 
-
 /* =========================================================
-   MAIN CONTENT
+   MAIN CONTENT GRID
 ========================================================= */
 
 .healingContent {
   width: 100%;
-  max-width: 1400px;
-
+  max-width: 1320px;
   margin: 0 auto;
-
-  padding: 50px;
-
+  padding: 40px 24px 20px;
   box-sizing: border-box;
-
   display: grid;
-
-  grid-template-columns: 48% 52%;
-
-  gap: 45px;
-
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
-
 /* =========================================================
-   IMAGE VIEWPORT
+   IMAGE SLIDER CONTAINER
 ========================================================= */
 
 .healingImage {
   width: 100%;
-
-  height: 520px;
-
+  height: 480px;
   position: relative;
-
   overflow: hidden;
-
   border-radius: 24px;
-}
-
-
-/* =========================================================
-   AUTO SCROLL TRACK
-========================================================= */
-
-.healingImageTrack {
-  display: flex;
-
-  gap: 20px;
-
-  width: max-content;
-
-  height: 100%;
-
-  animation: healingScroll 25s linear infinite;
-}
-
-
-/* Pause when mouse touches images */
-
-.healingImage:hover .healingImageTrack {
-  animation-play-state: paused;
-}
-
-
-/* =========================================================
-   IMAGE CARD
-========================================================= */
-
-.healingCard {
-  width: 520px;
-
-  height: 100%;
-
-  flex: 0 0 520px;
-
-  position: relative;
-
-  overflow: hidden;
-
-  border-radius: 24px;
-
-  background: #111a48;
-
   box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.35);
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  background: rgba(16, 28, 61, 0.6);
 }
 
-
-/* =========================================================
-   IMAGE
-========================================================= */
-
-.healingCard img {
-  width: 100%;
-
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
-
-  transition: transform 0.5s ease;
-}
-
-
-/* =========================================================
-   IMAGE HOVER
-========================================================= */
-
-.healingCard:hover img {
-  transform: scale(1.05);
-}
-
-
-/* =========================================================
-   CARD OVERLAY
-========================================================= */
-
-.healingCard::after {
-  content: "";
-
+.healingPhoto {
   position: absolute;
-
   inset: 0;
-
-  background: linear-gradient(
-    90deg,
-    #122248 0%,
-    #1f2d5d 45%,
-    #3e2e5e 100%
-  );
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
   pointer-events: none;
 }
 
-
-/* =========================================================
-   AUTO SCROLL
-========================================================= */
-
-@keyframes healingScroll {
-
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-
+.healingPhoto.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
 
+/* =========================================================
+   SLIDER DOTS
+========================================================= */
+
+.sliderDots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+  background: rgba(10, 16, 38, 0.55);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.dot.activeDot {
+  width: 26px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ffc837, #ff8008);
+  box-shadow: 0 0 10px rgba(255, 200, 55, 0.6);
+}
 
 /* =========================================================
-   TEXT
+   TEXT CONTENT
 ========================================================= */
 
 .healingText {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.healingText p {
+.articleText p {
   margin: 0 0 18px;
-
-  color: #ffffff;
-
-  font-size: 16px;
-
-  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15.5px;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
 }
 
+.articleText p:last-child {
+  margin-bottom: 24px;
+}
 
 /* =========================================================
-   READ MORE BUTTON
+   SEE MORE / ACTION BUTTON
 ========================================================= */
 
 .readmoreButton {
-  margin-top: 10px;
-
-  padding: 14px 32px;
-
+  align-self: flex-start;
+  padding: 14px 36px;
   border: none;
-
   border-radius: 30px;
-
-  background: #8f00ff;
-
+  background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
   color: #ffffff;
-
-  font-size: 16px;
-
+  font-size: 15px;
   font-weight: 700;
-
+  letter-spacing: 0.5px;
   cursor: pointer;
-
-  transition: 0.3s ease;
+  box-shadow:
+    0 10px 25px rgba(147, 51, 234, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+  transition: all 0.3s ease;
 }
 
 .readmoreButton:hover {
-  transform: translateY(-3px);
-
-  background: #a51aff;
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #c084fc 0%, #9333ea 100%);
+  box-shadow:
+    0 14px 30px rgba(168, 85, 247, 0.45),
+    0 0 15px rgba(192, 132, 252, 0.4);
 }
 
+.readmoreButton:active {
+  transform: translateY(0);
+}
 
 /* =========================================================
-   TABLET
+   FULL ARTICLE MODAL OVERLAY
 ========================================================= */
 
-@media (max-width: 900px) {
+.healingOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(8, 12, 28, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease-out;
+}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.healingOverlayBox {
+  width: 100%;
+  max-width: 820px;
+  max-height: 88vh;
+  background:
+    radial-gradient(ellipse at 85% 85%, rgba(92, 45, 105, 0.7) 0%, transparent 60%),
+    radial-gradient(ellipse at 15% 15%, rgba(22, 42, 86, 0.8) 0%, transparent 60%),
+    #131d3d;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Modal Header */
+.articleTopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 30px;
+  background: rgba(10, 16, 36, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.articleTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.articleTitle h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.heart {
+  font-size: 16px;
+}
+
+.yellowHeart {
+  color: #f59e0b;
+}
+
+.whiteHeart {
+  color: #ffffff;
+}
+
+.articleClose {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.articleClose:hover {
+  background: rgba(239, 68, 68, 0.85);
+  border-color: transparent;
+  transform: rotate(90deg);
+}
+
+.articleTopLine {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, #ffc837, #ff8008, #a855f7);
+}
+
+/* Modal Body */
+.articleScroll {
+  padding: 30px;
+  overflow-y: auto;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.articleScroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.articleScroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.articleContent h2 {
+  color: #ffd166;
+  font-size: 20px;
+  margin: 28px 0 14px;
+}
+
+.articleContent p {
+  margin: 0 0 16px;
+}
+
+.mediaContact {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mediaContact h3 {
+  margin-top: 0;
+  color: #a855f7;
+  font-size: 17px;
+}
+
+.mediaContact h4 {
+  margin: 16px 0 8px;
+  color: #ffffff;
+}
+
+.contactBrand {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.phoneList p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.mediaContact a {
+  color: #ffd166;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mediaContact a:hover {
+  text-decoration: underline;
+}
+
+/* Modal Footer */
+.articleFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 30px;
+  background: rgba(10, 16, 36, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footerBrand {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.footerBrand strong {
+  color: #ffd166;
+}
+
+.closeButton {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 960px) {
   .healingContent {
     grid-template-columns: 1fr;
-
-    padding: 35px;
+    gap: 36px;
+    padding: 24px 20px;
   }
 
   .healingImage {
-    height: 450px;
+    height: 400px;
   }
 
-  .healingCard {
-    width: 450px;
-
-    flex-basis: 450px;
+  .healingHeader h2 {
+    font-size: 22px;
   }
-
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 600px) {
-
-  .healingHeader {
-    padding: 25px 15px;
+  .healingStream {
+    padding: 24px 0 50px;
   }
 
   .healingHeader h2 {
     font-size: 18px;
-  }
-
-  .healingContent {
-    padding: 25px 20px;
-
-    grid-template-columns: 1fr;
-
-    gap: 30px;
+    line-height: 1.4;
   }
 
   .healingImage {
-    height: 300px;
-  }
-
-  .healingCard {
-    width: 300px;
-
-    flex-basis: 300px;
-
+    height: 280px;
     border-radius: 18px;
   }
 
-  .healingText p {
+  .articleText p {
     font-size: 14px;
   }
 
   .readmoreButton {
     width: 100%;
+    text-align: center;
   }
 
-}
-.closeButton {
-  display: block;
-  margin: 30px auto 10px;
+  .articleTopBar {
+    padding: 16px 20px;
+  }
 
-  padding: 14px 35px;
+  .articleTitle h1 {
+    font-size: 15px;
+  }
 
-  border: none;
-  border-radius: 30px;
+  .articleScroll {
+    padding: 20px;
+    font-size: 14px;
+  }
 
-  background: #8f00ff;
-  color: #ffffff;
+  .articleFooter {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+  }
 
-  font-size: 16px;
-  font-weight: 700;
-
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.closeButton:hover {
-  transform: translateY(-2px);
-  background: #a020ff;
+  .closeButton {
+    width: 100%;
+  }
 }
