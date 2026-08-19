@@ -46,6 +46,9 @@ const Hero = () => {
             <button
               type="button"
               className={styles.watchButton}
+              onClick={() => {
+                window.location.hash = "healing-streams";
+              }}
             >
               <span>WATCH LIVE</span>
 
@@ -60,6 +63,10 @@ const Hero = () => {
             <button
               type="button"
               className={styles.exploreButton}
+              onClick={() => {
+                const progEl = document.getElementById("programmes");
+                if (progEl) progEl.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               EXPLORE PROGRAMMES
             </button>
