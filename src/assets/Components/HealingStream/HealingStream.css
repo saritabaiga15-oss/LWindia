@@ -228,14 +228,17 @@
   width: 100%;
   max-width: 860px;
   max-height: 90vh;
-  background: #ffffff;
+  background:
+    radial-gradient(ellipse at 80% 60%, rgba(87, 34, 120, 0.75) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 40%, rgba(25, 30, 75, 0.85) 0%, transparent 55%),
+    linear-gradient(135deg, #1a1f4d 0%, #1e1a55 30%, #2a1a5e 55%, #3b1768 78%, #4a1875 100%);
   border-radius: 16px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
   overflow: hidden;
   animation: hsPopIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.3);
 }
 
 @keyframes hsPopIn {
@@ -323,12 +326,12 @@
   background: #fbbf24;
 }
 
-/* Modal Body (Clean White) */
+/* Modal Body (Dark Gradient) */
 .articleScroll {
   padding: 36px 40px;
   overflow-y: auto;
-  background: #ffffff;
-  color: #374151;
+  background: transparent;
+  color: rgba(226, 220, 245, 0.92);
   font-size: 15px;
   line-height: 1.75;
 }
@@ -338,11 +341,11 @@
 }
 
 .articleScroll::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .articleScroll::-webkit-scrollbar-thumb {
-  background: #020b3b;
+  background: rgba(168, 85, 247, 0.5);
   border-radius: 4px;
 }
 
@@ -350,7 +353,7 @@
   margin: 0 auto 16px;
   font-size: 24px;
   font-weight: 800;
-  color: #020b3b;
+  color: #ffffff;
   text-align: center;
   line-height: 1.35;
   max-width: 700px;
@@ -360,33 +363,33 @@
   width: 80%;
   max-width: 620px;
   height: 3px;
-  background: #f59e0b;
+  background: linear-gradient(90deg, #f59e0b, #ffd166);
   margin: 0 auto 24px;
   border-radius: 2px;
 }
 
 .articleContent p {
   margin: 0 0 18px;
-  color: #374151;
+  color: rgba(226, 220, 245, 0.88);
   font-size: 15px;
   line-height: 1.8;
   text-align: justify;
 }
 
 .articleContent p:nth-child(3) {
-  color: #1e3a5f;
+  color: #c4b5fd;
   font-weight: 500;
 }
 
 .articleContent p:nth-child(4) {
-  color: #1e3a5f;
+  color: #c4b5fd;
   font-weight: 500;
 }
 
 .articleContent h2 {
   font-size: 20px;
   font-weight: 800;
-  color: #020b3b;
+  color: #ffd166;
   margin: 28px 0 12px;
 }
 
@@ -394,25 +397,25 @@
   margin-top: 30px;
   padding: 20px 24px;
   border-radius: 12px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(168, 85, 247, 0.25);
 }
 
 .mediaContact h3 {
   margin: 0 0 6px;
   font-size: 17px;
   font-weight: 800;
-  color: #020b3b;
+  color: #ffd166;
 }
 
 .contactBrand {
   font-weight: 700;
-  color: #020b3b;
+  color: #ffffff;
   margin-bottom: 6px;
 }
 
 .mediaContact a {
-  color: #020b3b;
+  color: #c4b5fd;
   font-weight: 700;
   text-decoration: underline;
 }
@@ -421,7 +424,7 @@
   margin: 16px 0 8px;
   font-size: 14px;
   font-weight: 700;
-  color: #020b3b;
+  color: #ffffff;
 }
 
 .phoneList p {
@@ -436,14 +439,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 14px 30px;
-  background: #ffffff;
-  border-top: 1px solid #e5e7eb;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.03);
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footerBrand {
   font-size: 13.5px;
-  color: #6b7280;
+  color: rgba(226, 220, 245, 0.7);
   font-weight: 600;
   display: flex;
   gap: 6px;
@@ -451,7 +453,7 @@
 }
 
 .footerBrand strong {
-  color: #020b3b;
+  color: #ffd166;
   font-weight: 800;
 }
 
@@ -459,7 +461,7 @@
   padding: 9px 28px;
   border: none;
   border-radius: 999px;
-  background: #020b3b;
+  background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
   color: #ffffff;
   font-size: 13px;
   font-weight: 800;
@@ -467,13 +469,13 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(2, 11, 59, 0.35);
+  box-shadow: 0 4px 16px rgba(147, 51, 234, 0.4);
 }
 
 .closeButton:hover {
-  background: #041257;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(2, 11, 59, 0.5);
+  background: linear-gradient(135deg, #c084fc 0%, #9333ea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(168, 85, 247, 0.6);
 }
 
 /* =========================================================
