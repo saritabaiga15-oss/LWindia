@@ -7,6 +7,7 @@ import Features from "./assets/Components/Features/Features";
 import HealingStream from "./assets/Components/HealingStream/HealingStream";
 import Programm from "./assets/Components/Programmes/Programm";
 import Messages from "./assets/Components/Messages/Messages";
+import Footer from "./assets/Components/Footer/Footer";
 import HealingStreamPage from "./Pages/HealingStreamPage/HealingStreamPage";
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
           <HealingStream />
           <Programm />
           <Messages />
+          <Footer onNavigate={navigateTo} />
         </>
       )}
     </>

@@ -175,6 +175,11 @@ const HealingStream = () => {
             {/* ARTICLE SCROLL AREA */}
             <main className="articleScroll">
               <article className="articleContent">
+                <h2 className="articleInnerTitle">
+                  Global Anticipation as Healing Streams Live Healing Services hold this month
+                </h2>
+                <div className="articleHeadingUnderline"></div>
+
                 <p>
                   This July, the world, again, stands expectant for another
                   extraordinary outpouring of miracles, signs, wonders, and the
