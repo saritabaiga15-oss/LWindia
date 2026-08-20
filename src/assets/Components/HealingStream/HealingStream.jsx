@@ -175,101 +175,75 @@ const HealingStream = () => {
             {/* ARTICLE SCROLL AREA */}
             <main className="articleScroll">
               <article className="articleContent">
+
+                {/* ── MAIN TITLE ── */}
                 <h2 className="articleInnerTitle">
                   Global Anticipation as Healing Streams Live Healing Services hold this month
                 </h2>
                 <div className="articleHeadingUnderline"></div>
 
+                {/* ── SECTION 1: OVERVIEW ── */}
+                <h3 className="articleSectionHeading">Overview</h3>
                 <p>
-                  This July, the world, again, stands expectant for another
-                  extraordinary outpouring of miracles, signs, wonders, and the
-                  transforming power of the Gospel of Jesus Christ.
+                  This July, the world, again, stands expectant for another extraordinary outpouring of miracles, signs, wonders, and the transforming power of the Gospel of Jesus Christ.
+                </p>
+                <p>
+                  It promises to be a mighty wave of faith, prayer, and expectation, rising across the nations as billions prepare for the Healing Streams Live Healing Services, with Pastor Chris Oyakhilome, scheduled for <strong>Friday, July 24 to Sunday, July 26, 2026</strong>, at <strong>2:00 PM daily</strong>.
                 </p>
 
+                {/* ── SECTION 2: GLOBAL IMPACT ── */}
+                <h3 className="articleSectionHeading">Global Impact</h3>
                 <p>
-                  It promises to be a mighty wave of faith, prayer, and
-                  expectation, rising across the nations as billions prepare for
-                  the Healing Streams Live Healing Services, with Pastor Chris
-                  Oyakhilome, scheduled for Friday, July 24 to Sunday, July 26,
-                  2026, at 2:00 PM daily.
+                  Expected to reach billions of viewers across every continent, the three-day global broadcast will once again unite individuals, families, churches, communities, and nations in an unprecedented demonstration of the healing power of Jesus Christ.
+                </p>
+                <p>
+                  As the Healing Streams flow unhindered into homes, hospitals, correctional facilities, schools, workplaces, villages, and cities around the world, countless people will experience freedom from sickness, pain, disease, emotional trauma, mental distress, fear, confusion, oppression, and poverty through the power of God's Word and Spirit.
                 </p>
 
+                {/* ── SECTION 3: REGISTRATION ── */}
+                <h3 className="articleSectionHeading">Free Registration</h3>
                 <p>
-                  Expected to reach billions of viewers across every continent,
-                  the three-day global broadcast will once again unite
-                  individuals, families, churches, communities, and nations in
-                  an unprecedented demonstration of the healing power of Jesus
-                  Christ.
+                  Registration is completely free and open to people of every nation, race, language, and background at <strong>healingstreams.org</strong>. During registration, participants seeking healing for themselves or loved ones are encouraged to indicate their specific healing needs.
                 </p>
 
+                {/* ── SECTION 4: INVITATION ── */}
+                <h3 className="articleSectionHeading">An Invitation to the World</h3>
                 <p>
-                  As the Healing Streams flow unhindered into homes, hospitals,
-                  correctional facilities, schools, workplaces, villages, and
-                  cities around the world, it is expected that countless people
-                  will experience freedom from sickness, pain, disease, emotional
-                  trauma, mental distress, fear, confusion, oppression, poverty,
-                  and more through the power of God's Word and Spirit.
+                  As July 24 draws nearer, organizers are extending a global invitation to individuals, families, churches, healthcare professionals, community organizations, and leaders across every nation to participate in what promises to be another historic edition of the Healing Streams Live Healing Services.
+                </p>
+                <p>
+                  Whether attending from a Healing Center or joining online from anywhere in the world, participants are encouraged to come with faith, invite others, and expect a divine encounter.
                 </p>
 
-                <p>
-                  Registration is completely free and open to people of every
-                  nation, race, language, and background at healingstreams.org.
-                  During registration, participants seeking healing for
-                  themselves or loved ones are encouraged to indicate their
-                  specific healing needs.
-                </p>
-
-                <h2>An Invitation to the World</h2>
-
-                <p>
-                  As July 24 draws nearer, organizers are extending a global
-                  invitation to individuals, families, churches, healthcare
-                  professionals, community organizations, and leaders across
-                  every nation to participate in what promises to be another
-                  historic edition of the Healing Streams Live Healing Services.
-                </p>
-
-                <p>
-                  Whether attending from a Healing Center or joining online from
-                  anywhere in the world, participants are encouraged to come with
-                  faith, invite others, and expect a divine encounter.
-                </p>
-
-                {/* MEDIA CONTACT */}
+                {/* ── MEDIA CONTACT ── */}
                 <div className="mediaContact">
-                  <h3>Media Contact:</h3>
-                  <p className="contactBrand">
-                    Healing Streams Communications
-                  </p>
-                  <p>
-                    Email:{" "}
-                    <a href="mailto:info@healingstreams.tv">
-                      info@healingstreams.tv
-                    </a>
-                  </p>
+                  <h3 className="mediaContactTitle">Media Contact</h3>
+                  <p className="contactBrand">Healing Streams Communications</p>
 
-                  <h4>Phone Numbers</h4>
-                  <div className="phoneList">
-                    <p>+27 799 675 852 (South Africa)</p>
-                    <p>+234 (1) 888 5066 (Nigeria)</p>
-                    <p>+1 832 724 9390 (USA)</p>
-                    <p>+1 289 622 1634 (Canada)</p>
-                    <p>+44 (0) 333 188 0710 (UK)</p>
-                    <p>+91 96500 96633 (Asia)</p>
-                    <p>+91 77949 93762 (India)</p>
+                  <div className="contactRow">
+                    <span className="contactLabel">✉ Email:</span>
+                    <a href="mailto:info@healingstreams.tv">info@healingstreams.tv</a>
                   </div>
 
-                  <p className="websiteLink">
-                    Website:{" "}
-                    <a
-                      href="https://healingstreams.tv"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      https://healingstreams.tv
+                  <div className="contactRow">
+                    <span className="contactLabel">🌐 Website:</span>
+                    <a href="https://healingstreams.tv" target="_blank" rel="noopener noreferrer">
+                      healingstreams.tv
                     </a>
-                  </p>
+                  </div>
+
+                  <h4 className="phoneHeading">📞 Global Helplines</h4>
+                  <div className="phoneGrid">
+                    <div className="phoneItem"><span className="phoneFlag">🇿🇦</span><span>+27 799 675 852</span><span className="phoneCountry">South Africa</span></div>
+                    <div className="phoneItem"><span className="phoneFlag">🇳🇬</span><span>+234 (1) 888 5066</span><span className="phoneCountry">Nigeria</span></div>
+                    <div className="phoneItem"><span className="phoneFlag">🇺🇸</span><span>+1 832 724 9390</span><span className="phoneCountry">USA</span></div>
+                    <div className="phoneItem"><span className="phoneFlag">🇨🇦</span><span>+1 289 622 1634</span><span className="phoneCountry">Canada</span></div>
+                    <div className="phoneItem"><span className="phoneFlag">🇬🇧</span><span>+44 (0) 333 188 0710</span><span className="phoneCountry">UK</span></div>
+                    <div className="phoneItem"><span className="phoneFlag">🇮🇳</span><span>+91 96500 96633</span><span className="phoneCountry">India / Asia</span></div>
+                    <div className="phoneItem"><span className="phoneFlag">🇮🇳</span><span>+91 77949 93762</span><span className="phoneCountry">India</span></div>
+                  </div>
                 </div>
+
               </article>
             </main>
 
